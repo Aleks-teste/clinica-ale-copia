@@ -3,44 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Consulta - Clínica Tec Saúde</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Cabeçalho -->
     <header>
-        <div class="logo">
-            <h1>Meu Site</h1>
-        </div>
+        <img src="imagens/logo TEC SAUDE.jpg" alt="Logo Clínica Tec Saúde">
+        <h1>Clínica Tec Saúde</h1>
         <nav>
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="emergencia.html">Emergência</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="consulta.html">Consulta</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span>&#9776;</span>
-            </div>
+            <a href="home.html">Home</a>
+            <a href="emergencia.html">Emergência</a>
+            <a href="sobre-nos.html">Sobre Nós</a>
+            <a href="consulta.html">Consulta</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
         </nav>
     </header>
 
-    <!-- Conteúdo Principal -->
-    <div class="content">
-        <section id="consulta">
-            <h2>Consulta</h2>
-            <p>Informações para realizar uma consulta.</p>
+    <main>
+        <section class="consult-section">
+            <h1>Agendamento de Consulta</h1>
+            <form>
+                <label for="specialty">Especialidade:</label>
+                <select id="specialty" required>
+                    <option value="">Selecione</option>
+                    <option value="cardiologia">Cardiologia</option>
+                    <option value="geriatria">Geriatria</option>
+                    <option value="dermatologia">Dermatologia</option>
+                    <option value="ginecologia">Ginecologia</option>
+                </select>
+
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" required>
+
+                <label for="dob">Data de Nascimento:</label>
+                <input type="date" id="dob" required>
+
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+
+                <label for="preferred-date">Data e Hora Preferidas:</label>
+                <input type="datetime-local" id="preferred-date">
+
+                <label for="message">Motivo da Consulta:</label>
+                <textarea id="message" rows="4"></textarea>
+
+                <label for="insurance">Plano de Saúde:</label>
+                <input type="text" id="insurance">
+
+                <label for="privacy-policy">
+                    <input type="checkbox" id="privacy-policy" required>
+                    Aceito os <a href="/termos-de-uso">termos de uso</a> e a <a href="/politica-de-privacidade">política de privacidade</a>.
+                </label>
+
+                <button type="submit">Enviar</button>
+            </form>
         </section>
-    </div>
+    </main>
 
-    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+        <p>Clínica Tec Saúde © 2024. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
+
