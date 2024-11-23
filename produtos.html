@@ -3,44 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Produtos - Clínica Tec Saúde</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Cabeçalho -->
     <header>
-        <div class="logo">
-            <h1>Meu Site</h1>
-        </div>
+        <img src="imagens/logo TEC SAUDE.jpg" alt="Logo Clínica Tec Saúde">
+        <h1>Clínica Tec Saúde</h1>
         <nav>
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="emergencia.html">Emergência</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="consulta.html">Consulta</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span>&#9776;</span>
-            </div>
+            <a href="home.html">Home</a>
+            <a href="emergencia.html">Emergência</a>
+            <a href="sobre-nos.html">Sobre Nós</a>
+            <a href="consulta.html">Consulta</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
         </nav>
     </header>
 
-    <!-- Conteúdo Principal -->
-    <div class="content">
-        <section id="products">
-            <h2>Produtos</h2>
-            <div id="products-container"></div>
+    <main>
+        <section class="products-section">
+            <h1>Produtos Disponíveis</h1>
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="imagens/cadeira.jpg" alt="Cadeira">
+                    <h2>Cadeira de Descanso</h2>
+                    <p>Conforto para o seu dia.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagens/fitoterápicos.jpg" alt="Fitoterápicos">
+                    <h2>Fitoterápicos</h2>
+                    <p>Produtos naturais para saúde.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagens/relógio.jpg" alt="Relógio">
+                    <h2>Relógios Médicos</h2>
+                    <p>Praticidade e controle.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="imagens/passeios.jpg" alt="Passeios">
+                    <h2>Pacotes de Passeios</h2>
+                    <p>Atividades externas para lazer.</p>
+                </div>
+            </div>
         </section>
-    </div>
+    </main>
 
-    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+        <p>Clínica Tec Saúde © 2024. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
+
