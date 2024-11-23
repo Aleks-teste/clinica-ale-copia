@@ -23,27 +23,8 @@
     <main>
         <section class="products-section">
             <h1>Produtos Disponíveis</h1>
-            <div class="grid">
-                <div class="grid-item">
-                    <img src="imagens/cadeira.jpg" alt="Cadeira">
-                    <h2>Cadeira de Descanso</h2>
-                    <p>Conforto para o seu dia.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="imagens/fitoterápicos.jpg" alt="Fitoterápicos">
-                    <h2>Fitoterápicos</h2>
-                    <p>Produtos naturais para saúde.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="imagens/relógio.jpg" alt="Relógio">
-                    <h2>Relógios Médicos</h2>
-                    <p>Praticidade e controle.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="imagens/passeios.jpg" alt="Passeios">
-                    <h2>Pacotes de Passeios</h2>
-                    <p>Atividades externas para lazer.</p>
-                </div>
+            <div class="grid" id="products-grid">
+                <!-- Produtos serão carregados dinamicamente -->
             </div>
         </section>
     </main>
@@ -51,6 +32,49 @@
     <footer>
         <p>Clínica Tec Saúde © 2024. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        async function carregarProdutos() {
+            try {
+                // Carregar o arquivo JSON de produtos
+                const resposta = await fetch('produtos.json');
+                const produtos = await resposta.json();
+
+                const grid = document.getElementById('products-grid');
+                produtos.forEach(produto => {
+                    // Criar a estrutura para cada produto
+                    const div = document.createElement('div');
+                    div.classList.add('grid-item');
+
+                    const h2 = document.createElement('h2');
+                    h2.textContent = produto.nome;
+
+                    const p = document.createElement('p');
+                    p.textContent = produto.descricao;
+
+                    const img = document.createElement('img');
+                    img.src = produto.imagem;
+                    img.alt = produto.nome;
+
+                    const link = document.createElement('a');
+                    link.href = produto.url;
+                    link.textContent = 'Ver Detalhes';
+
+                    // Adicionar os elementos ao grid
+                    div.appendChild(img);
+                    div.appendChild(h2);
+                    div.appendChild(p);
+                    div.appendChild(link);
+                    grid.appendChild(div);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar os produtos:', error);
+            }
+        }
+
+        // Carregar os produtos assim que a página carregar
+        document.addEventListener('DOMContentLoaded', carregarProdutos);
+    </script>
 </body>
 </html>
 
