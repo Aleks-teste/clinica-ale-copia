@@ -1,0 +1,26 @@
+[
+    {
+        "nome": "Cadeira de Descanso",
+        "descricao": "Conforto para o seu dia.",
+        "imagem": "https://www.itaassistiva.com.br/cadeira-de-rodas-e-carrinhos/cadeira-de-rodas-em-aluminio-dobravel-ate-120-kg-d600-dellamed",
+        "url": "https://www.itaassistiva.com.br/cadeira-de-rodas-e-carrinhos/cadeira-de-rodas-em-aluminio-dobravel-ate-120-kg-d600-dellamed"
+    },
+    {
+        "nome": "Fitoterápicos",
+        "descricao": "Produtos naturais para saúde.",
+        "imagem": "https://www.farmaciamanipulart.com.br/tanchagem-fitoterapico",
+        "url": "https://www.farmaciamanipulart.com.br/tanchagem-fitoterapico"
+    },
+    {
+        "nome": "Relógios Médicos",
+        "descricao": "Praticidade e controle.",
+        "imagem": "https://lojazibo.com.br/products/relogio-inteligente-medical",
+        "url": "https://lojazibo.com.br/products/relogio-inteligente-medical"
+    },
+    {
+        "nome": "Pacotes de Passeios",
+        "descricao": "Atividades externas para lazer.",
+        "imagem": "http://www.viaregiatur.com.br/pacote-especial/pacotes-de-viagem-para-melhor-idade/",
+        "url": "http://www.viaregiatur.com.br/pacote-especial/pacotes-de-viagem-para-melhor-idade/"
+    }
+]
