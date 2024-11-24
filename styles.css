@@ -1,9 +1,14 @@
-body {
-  font-family: Arial, sans-serif;
+/* Resetando alguns estilos padrões */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
   color: #333;
-  background-color: #0077b6;
+  background-color: #0077b6; /* Cor de fundo para todo o site */
 }
 
 header {
@@ -56,6 +61,73 @@ nav a.emergency {
   display: block;
 }
 
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.home-text {
+  width: 50%;
+}
+
+.home-image {
+  width: 50%;
+  max-width: 600px;
+}
+
+.home-text h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-text p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+.emergency-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-color: #fefefe;
+  padding: 20px;
+}
+
+.emergency-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #d9534f;
+}
+
+.emergency-section p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.emergency-section a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #28a745;
+  text-decoration: none;
+  border: 2px solid #28a745;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.emergency-section a:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Estilos para a página de produtos */
 .grid {
   display: flex;
   justify-content: space-between;
@@ -87,34 +159,7 @@ nav a.emergency {
   margin-bottom: 10px;
 }
 
-.grid-item p {
-  font-size: 14px;
-  color: #333;
-}
-
-.grid-item a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #023e8a;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.grid-item a:hover {
-  background-color: #0077b6;
-}
-
-footer {
-  background-color: #023e8a;
-  color: white;
-  text-align: center;
-  padding: 10px 20px;
-}
-
-/* Estilos específicos para o formulário de agendamento */
-
+/* Estilo do formulário de contato e agendamento */
 form {
   background-color: white;
   padding: 20px;
@@ -131,7 +176,9 @@ form label {
   color: #023e8a;
 }
 
-form input, form select, form textarea {
+form input,
+form select,
+form textarea {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -140,8 +187,9 @@ form input, form select, form textarea {
   border-radius: 5px;
 }
 
-form input[type="date"], form input[type="datetime-local"] {
-  padding-left: 10px;  /* Ajuste para melhor visualização das datas */
+form input[type="date"],
+form input[type="datetime-local"] {
+  padding-left: 10px;
 }
 
 form textarea {
@@ -175,6 +223,13 @@ form .terms input {
   margin-right: 10px;
 }
 
+footer {
+  background-color: #023e8a;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .grid {
@@ -184,6 +239,24 @@ form .terms input {
   .grid-item {
     min-width: 100%;
     margin-bottom: 20px;
+  }
+
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-text, .home-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-text h2 {
+    font-size: 2rem;
+  }
+
+  .emergency-section a {
+    font-size: 1.5rem;
   }
 }
 
