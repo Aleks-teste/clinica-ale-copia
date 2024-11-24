@@ -1,26 +1,60 @@
-[
-    {
-        "nome": "Cadeira de Rodas",
-        "descricao": "Conforto para quem precisa.",
-        "imagem": "https://www.itaassistiva.com.br/cadeira-de-rodas-e-carrinhos/cadeira-de-rodas-em-aluminio-dobravel-ate-120-kg-d600-dellamed",
-        "url": "https://www.itaassistiva.com.br/cadeira-de-rodas-e-carrinhos/cadeira-de-rodas-em-aluminio-dobravel-ate-120-kg-d600-dellamed"
-    },
-    {
-        "nome": "Fitoterápicos",
-        "descricao": "Produtos naturais para saúde.",
-        "imagem": "https://www.farmaciamanipulart.com.br/tanchagem-fitoterapico",
-        "url": "https://www.farmaciamanipulart.com.br/tanchagem-fitoterapico"
-    },
-    {
-        "nome": "Relógios Médicos",
-        "descricao": "Praticidade e controle.",
-        "imagem": "https://lojazibo.com.br/products/relogio-inteligente-medical",
-        "url": "https://lojazibo.com.br/products/relogio-inteligente-medical"
-    },
-    {
-        "nome": "Pacotes de Passeios",
-        "descricao": "Atividades externas para lazer.",
-        "imagem": "http://www.viaregiatur.com.br/pacote-especial/pacotes-de-viagem-para-melhor-idade/",
-        "url": "http://www.viaregiatur.com.br/pacote-especial/pacotes-de-viagem-para-melhor-idade/"
-    }
-]
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta - Clínica Tec Saúde</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Função JavaScript para redirecionar ao clicar no botão "Ver Detalhes"
+        function redirecionar(url) {
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="imagens/cadeira.jpg" alt="Cadeira">
+        <h1>Clínica Tec Saúde</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="emergencia.html">Emergência</a>
+            <a href="sobre-nos.html">Sobre Nós</a>
+            <a href="consulta.html">Consulta</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="imagem-section">
+            <h2>Imagens do Site</h2>
+            
+            <!-- Exemplo de Imagem com redirecionamento para URL externa -->
+            <div class="imagem-item">
+                <img src="imagens/cadeira.jpg" alt="Cadeira">
+                <button onclick="redirecionar('https://www.itaassistiva.com.br/cadeira-de-rodas-e-carrinhos/cadeira-de-rodas-em-aluminio-dobravel-ate-120-kg-d600-dellamed')">Ver Detalhes</button>
+            </div>
+
+            <div class="imagem-item">
+                <img src="imagens/fitoterápicos.jpg" alt="Fitoterápicos">
+                <button onclick="redirecionar('https://www.farmaciamanipulart.com.br/tanchagem-fitoterapico')">Ver Detalhes</button>
+            </div>
+
+            <div class="imagem-item">
+                <img src="imagens/relógio.jpg" alt="Relógio">
+                <button onclick="redirecionar('https://lojazibo.com.br/products/relogio-inteligente-medical')">Ver Detalhes</button>
+            </div>
+
+            <div class="imagem-item">
+                <img src="imagens/passeios.jpg" alt="Passeios">
+                <button onclick="redirecionar('http://www.viaregiatur.com.br/pacote-especial/pacotes-de-viagem-para-melhor-idade/')">Ver Detalhes</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Clínica Tec Saúde © 2024. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
