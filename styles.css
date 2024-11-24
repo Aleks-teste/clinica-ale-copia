@@ -186,6 +186,7 @@ form .terms input {
 
 .home-text {
   flex: 1;  /* O texto ocupa 50% da largura */
+  padding-right: 20px;
 }
 
 .home-image {
