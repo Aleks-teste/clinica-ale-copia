@@ -1,4 +1,4 @@
-/* Resetando alguns estilos padrões */
+/* Reset de estilos padrões */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   color: #333;
-  background-color: #0077b6; /* Cor de fundo para todo o site */
+  background-color: #0077b6;
 }
 
 header {
@@ -52,6 +52,7 @@ nav a.emergency {
   padding: 10px 15px;
 }
 
+/* Controle da visibilidade das seções */
 .section {
   display: none;
   padding: 40px 20px;
@@ -67,7 +68,6 @@ nav a.emergency {
   justify-content: space-between;
   height: 80vh;
   padding: 20px;
-  box-sizing: border-box;
 }
 
 .home-text {
@@ -89,6 +89,7 @@ nav a.emergency {
   line-height: 1.8;
 }
 
+/* Página de emergência */
 .emergency-section {
   display: flex;
   flex-direction: column;
@@ -124,10 +125,10 @@ nav a.emergency {
 
 .emergency-section a:hover {
   background-color: #28a745;
-  color: #fff;
+  color: white;
 }
 
-/* Estilos para a página de produtos */
+/* Estilo para a página de produtos */
 .grid {
   display: flex;
   justify-content: space-between;
@@ -223,6 +224,7 @@ form .terms input {
   margin-right: 10px;
 }
 
+/* Rodapé */
 footer {
   background-color: #023e8a;
   color: white;
