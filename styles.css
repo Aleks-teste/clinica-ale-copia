@@ -178,18 +178,18 @@ form .terms input {
 /* Responsividade para a divisão de conteúdo com texto e imagem */
 .home-content {
   display: flex;
-  justify-content: space-between;  /* Distribui o texto e a imagem */
-  align-items: center;  /* Alinha o conteúdo verticalmente */
+  justify-content: space-between;  /* Divide o texto e a imagem nas colunas */
+  align-items: flex-start;  /* Alinha o conteúdo ao topo */
   gap: 20px;  /* Espaçamento entre o texto e a imagem */
   width: 100%;
 }
 
 .home-text {
-  flex: 1;
+  flex: 1;  /* O texto ocupa 50% da largura */
 }
 
 .home-image {
-  flex: 1;
+  flex: 1;  /* A imagem ocupa 50% da largura */
   max-width: 100%;  /* Garante que a imagem não ultrapasse a largura do container */
   height: auto;
 }
@@ -222,4 +222,3 @@ form .terms input {
     margin-top: 20px;
   }
 }
-
