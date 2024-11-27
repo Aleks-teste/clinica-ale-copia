@@ -1,0 +1,79 @@
+/* Geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Conteúdo */
+.content {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header nav ul {
+      display: none;
+      flex-direction: column;
+      margin-top: 10px;
+  }
+
+  header nav ul.active {
+      display: block;
+  }
+
+  .hamburger {
+      display: block;
+  }
+}
+
+/* Produtos */
+#products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+}
