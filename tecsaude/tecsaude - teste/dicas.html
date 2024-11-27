@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/Css/Header.css">
+    <link rel="stylesheet" href="Assets/Css/Main.css">
+    <link rel="stylesheet" href="Assets/Css/Menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Clinica TecSaude</title>
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <nav id="navbar">
+            <a id="nav_logo"><img src="Assets/Img/logo-final.jpg" alt="Logo TecSaude">TecSaude</a>
+
+            <ul id="nav_list">
+                <li class="nav-item">
+                    <a href="Index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="produtos.php">Produtos</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="dicas.html">Dicas</a>
+                </li>
+                
+            </ul>
+
+            <button class="btn-default">
+                <a href="Formulario.html">Cadastrar Produtos</a>
+            </button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="Index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="produtos.php">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="dicas.html">Dicas</a>
+                </li>
+
+            </ul>
+
+            <button class="btn-default">
+                <a href="Formulario.html">Cadastrar Produtos</a>
+            </button>
+        </div>
+    </header> 
+
+    <main id="content">
+        <section id="menu">
+            <h4 class="section-title">Dicas</h4>
+            <p>
+                A seguir dicas de alguns alimentos e atitudes saudáveis que irão melhorar seu bem estar!
+            </p>
+
+            <div id="petisco">
+                <div class="petisco-list">
+                    <h2 class="petisco-title">Alimentos</h2>
+                    <img src="Assets/Img/alface.png" class="petisco-one" alt="alface">
+
+                    <h3>
+                        Alface
+                    </h3>
+
+                    <span class="petisco">
+                        Mantém a saúde dos olhos e ajuda a regular o açúcar no sangue.
+                    </span>
+                    
+                    <img src="Assets/Img/feijao.jpg" class="petisco-one" alt="feijao">
+
+                    <h3>
+                        Feijão
+                    </h3>
+
+                    <span class="petisco">
+                        Controle de absorção de gorduras e contribui para o equilíbrio do colesterol.
+                    </span>
+
+                    
+                    <img src="Assets/Img/peixe.png" class="petisco-one" alt="peixe">
+
+                    <h3>
+                        Peixe
+                    </h3>
+
+                    <span class="petisco">
+                        Rico em omega 3, fósforo e cálcio.
+                    </span>
+
+                    <img src="Assets/Img/melancia.png" class="petisco-one" alt="melancia">
+
+                    <h3>
+                        Melância
+                    </h3>
+
+                    <span class="petisco">
+                        Rica em vitamina A e ajuda na prevenção do câncer.
+                    </span>
+                </div>
+
+                <div class="petisco-list">
+                    <h2 class="petisco-title">Atitudes Saudáveis</h2>
+                    <img src="Assets/Img/acordando.jpg" class="petisco-one" alt="acordar">
+
+                    <h3>
+                        Acordar cedo
+                    </h3>
+
+                    <span class="petisco">
+                        Reduz o risco de depressão.
+                    </span>
+                    <img src="Assets/Img/caminhada.jpeg" class="petisco-one" alt="caminhadaz">
+
+                    <h3>
+                        Caminhada
+                    </h3>
+
+                    <span class="petisco">
+                        Combate a osteoporose e deixa o pulmão mais eficiente.
+                    </span>
+                    <img src="Assets/Img/hidro.jpeg" class="petisco-one" alt="hidro">
+
+                    <h3>
+                        Hidroginastica
+                    </h3>
+
+                    <span class="petisco">
+                        Melhora a força muscular, resistênciae e flexibilidade.
+                    </span>
+                    <img src="Assets/Img/danca.jpeg" class="petisco-one" alt="Vegetais">
+
+                    <h3>
+                        Dançar
+                    </h3>
+
+                    <span class="petisco">
+                        Aumenta a coordenação e reduz o estresse.
+                    </span>               
+                </div>
+            </div>
+            
+        </section>
+        
+       
+    </main>
+    
+    <script src="Javascript/Script.js"></script>
+</body>
+</html>

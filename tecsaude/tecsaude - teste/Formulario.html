@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/Css/Formulario.css">
+    <title>Formulário de Cadastro</title>
+    <script src="Javascript/Script.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="Assets/Img/descanso.jpg" alt="Form image">
+        </div>
+        <div class="form">
+            <form method="POST" action="form.php">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastrar produto</h1>
+                    </div>
+                    
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" name="nome" placeholder="Digite o nome do produto" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="descricao">Descrição</label>
+                        <input id="descricao" type="text" name="descricao" placeholder="Descreva o produto" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="foto">Inserir imagem</label>
+                        <input type="file" id="imagem"  name="imagem"  required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="valor">Valor</label>
+                        <input id="valor" type="text" name="valor" placeholder="Digite o valor do produto" required>
+                    </div>
+
+                
+
+                </div>
+
+                <div class="continue-button">
+                    <button type="submit" name="botao" id="cadastrar">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
