@@ -6,64 +6,6 @@
     <title>Emergência - Clínica Tec Saúde</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <style>
-        /* CSS específico para o layout da página de Emergência */
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        .emergency-section {
-            margin: 20px;
-            padding: 20px;
-        }
-
-        .emergency-section h1 {
-            color: red;
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .emergency-section p {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-
-        .emergency-section strong {
-            font-size: 1.5rem;
-        }
-
-        .emergency-section a {
-            display: inline-block;
-            background-color: #25D366;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin-top: 15px;
-        }
-
-        .emergency-section a:hover {
-            background-color: #1da851;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #f1f1f1;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -95,11 +37,28 @@
     </header> 
     
     <main>
-        <section class="emergency-section" id="emergency">
-            <h1>Emergência</h1>
-            <p>Se estiver enfrentando uma emergência, entre em contato imediatamente:</p>
-            <p><strong>Telefone de Emergência: 19 9876-5432</strong></p>
-            <a href="https://wa.me/551998765432" target="_blank">Chamar no WhatsApp</a>
+        <section class="emergency-section section" id="emergency">
+            <!-- Título em vermelho -->
+            <h1 style="color: red; font-size: 2.5rem; text-align: center;">Emergência</h1>
+            
+            <!-- Texto centralizado -->
+            <p style="font-size: 1.2rem; text-align: center; margin: 15px 0;">
+                Se estiver enfrentando uma emergência, entre em contato imediatamente:
+            </p>
+            
+            <!-- Telefone em negrito -->
+            <p style="font-size: 1.5rem; font-weight: bold; text-align: center;">
+                Telefone de Emergência: 19 9876-5432
+            </p>
+            
+            <!-- Botão do WhatsApp -->
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://wa.me/551998765432" 
+                   target="_blank" 
+                   style="display: inline-block; background-color: #25D366; color: white; font-size: 1.2rem; font-weight: bold; text-decoration: none; padding: 10px 20px; border-radius: 5px;">
+                    Chamar no WhatsApp
+                </a>
+            </div>
         </section> 
     </main>
 
@@ -108,4 +67,3 @@
     </footer>
 </body>
 </html>
-
