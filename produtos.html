@@ -5,27 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Clínica Tec Saúde</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <img src="imagens/logo TEC SAUDE.jpg" alt="Logo Clínica Tec Saúde">
         <h1>Clínica Tec Saúde</h1>
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="emergencia.html">Emergência</a>
-            <a href="sobre-nos.html">Sobre Nós</a>
-            <a href="consulta.html">Consulta</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="contato.html">Contato</a>
+      
+        <!-- Menu para Computador -->
+        <nav class="desktop-menu">
+          <a href="index.html">Home</a>
+          <a href="emergencia.html">Emergência</a>
+          <a href="sobre-nos.html">Sobre Nós</a>
+          <a href="consulta.html">Consulta</a>
+          <a href="produtos.html">Produtos</a>
+          <a href="contato.html">Contato</a>
         </nav>
-    </header>
+      
+        <!-- Menu para Celular (Hambúrguer Menu) -->
+        <nav class="mobile-menu">
+          <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+          <ul class="mobile-menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="emergencia.html">Emergência</a></li>
+            <li><a href="sobre-nos.html">Sobre Nós</a></li>
+            <li><a href="consulta.html">Consulta</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+      
 
     <main>
         <section class="products-section">
             <h1>Produtos Disponíveis</h1>
+
+            <!-- Formulário para criar um novo produto -->
+            <h2>Criar Novo Produto</h2>
+            <form id="form-criar-produto" enctype="multipart/form-data" method="post" action="create.php">
+                <input type="text" id="nome" name="nome" placeholder="Nome do Produto" required>
+                <input type="text" id="descricao" name="descricao" placeholder="Descrição" required>
+                <input type="file" name="imagem" id="imagem" accept="image/*" required>
+                <input type="text" id="url" name="url" placeholder="URL do Produto" required>
+                <button type="submit">Criar Produto</button>
+            </form>
+            
+            
+            
+
+            <h2>Produtos Listados</h2>
             <div class="grid" id="products-grid">
                 <!-- Produtos serão carregados dinamicamente -->
             </div>
+
+            <!-- Formulário para editar um produto -->
+           <!-- Formulário para editar um produto -->
+            <h2>Editar Produto</h2>
+            <form id="form-editar-produto" enctype="multipart/form-data" action="update.php" method="POST" style="display: none;">
+                <input type="hidden" id="edit-id" name="id">
+                <input type="text" id="edit-nome" name="nome" placeholder="Nome do Produto" required>
+                <input type="text" id="edit-descricao" name="descricao" placeholder="Descrição" required>
+                <input type="text" id="edit-url" name="url" placeholder="URL do Produto" required>
+                
+                <!-- Campo para o usuário enviar uma nova imagem -->
+                <img id="imagem-atual" src="" alt="Imagem atual" style="max-width: 200px; margin-top: 10px;">
+                <input type="file" id="edit-imagem" name="imagem">
+
+                <button type="submit">Atualizar Produto</button>
+                <button type="button" id="cancelar-edicao">Cancelar</button>
+            </form>
+
         </section>
     </main>
 
@@ -33,47 +83,6 @@
         <p>Clínica Tec Saúde © 2024. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        async function carregarProdutos() {
-            try {
-                // Carregar o arquivo JSON de produtos
-                const resposta = await fetch('produtos.json');
-                const produtos = await resposta.json();
-
-                const grid = document.getElementById('products-grid');
-                produtos.forEach(produto => {
-                    // Criar a estrutura para cada produto
-                    const div = document.createElement('div');
-                    div.classList.add('grid-item');
-
-                    const h2 = document.createElement('h2');
-                    h2.textContent = produto.nome;
-
-                    const p = document.createElement('p');
-                    p.textContent = produto.descricao;
-
-                    const img = document.createElement('img');
-                    img.src = produto.imagem;
-                    img.alt = produto.nome;
-
-                    const link = document.createElement('a');
-                    link.href = produto.url;
-                    link.textContent = 'Ver Detalhes';
-
-                    // Adicionar os elementos ao grid
-                    div.appendChild(img);
-                    div.appendChild(h2);
-                    div.appendChild(p);
-                    div.appendChild(link);
-                    grid.appendChild(div);
-                });
-            } catch (error) {
-                console.error('Erro ao carregar os produtos:', error);
-            }
-        }
-
-        // Carregar os produtos assim que a página carregar
-        document.addEventListener('DOMContentLoaded', carregarProdutos);
-    </script>
+   
 </body>
 </html>

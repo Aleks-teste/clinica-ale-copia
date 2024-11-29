@@ -5,20 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta - Clínica Tec Saúde</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <img src="imagens/logo TEC SAUDE.jpg" alt="Logo Clínica Tec Saúde">
         <h1>Clínica Tec Saúde</h1>
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="emergencia.html">Emergência</a>
-            <a href="sobre-nos.html">Sobre Nós</a>
-            <a href="consulta.html">Consulta</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="contato.html">Contato</a>
+      
+        <!-- Menu para Computador -->
+        <nav class="desktop-menu">
+          <a href="index.html">Home</a>
+          <a href="emergencia.html">Emergência</a>
+          <a href="sobre-nos.html">Sobre Nós</a>
+          <a href="consulta.html">Consulta</a>
+          <a href="produtos.html">Produtos</a>
+          <a href="contato.html">Contato</a>
         </nav>
-    </header>
+      
+        <!-- Menu para Celular (Hambúrguer Menu) -->
+        <nav class="mobile-menu">
+          <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+          <ul class="mobile-menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="emergencia.html">Emergência</a></li>
+            <li><a href="sobre-nos.html">Sobre Nós</a></li>
+            <li><a href="consulta.html">Consulta</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
 
     <main>
         <section>

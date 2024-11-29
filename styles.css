@@ -4,8 +4,38 @@ body {
   padding: 0;
   color: #333;
   background-color: #0077b6;
+  max-width: 100%;
+  overflow-x: hidden; /* Evita a rolagem horizontal */
+  box-sizing: border-box; /* Garante que padding e bordas não ultrapassem a largura do elemento */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+
+
+main h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase; /* Letras maiúsculas */
+  letter-spacing: 1px; /* Espaçamento entre letras */
+  text-align: center;
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 700; /* Negrito */
+  color: #023e8a; /* Azul escuro */
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: capitalize; /* Apenas a primeira letra maiúscula */
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-transform: none; /* Normal */
+  letter-spacing: normal;
+}
 header {
   background-color: #023e8a;
   color: white;
@@ -13,6 +43,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
 header img {
@@ -47,6 +78,57 @@ nav a.emergency {
   padding: 10px 15px;
 }
 
+/* Estilo padrão para o menu mobile */
+.mobile-menu {
+  display: none; /* Esconde o menu mobile em telas maiores */
+  position: relative;
+  width: 100%;
+}
+
+.mobile-menu .menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-menu-items {
+  display: none; /* Esconde as opções inicialmente */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #023e8a;
+  position: absolute;
+  top: 40px; /* Ajuste conforme a altura do header */
+  right: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-items li {
+  text-align: center;
+  border-bottom: 1px solid #0077b6;
+}
+
+.mobile-menu-items li a {
+  display: block;
+  padding: 15px; /* Aumenta o espaço interno */
+  color: white;
+  text-decoration: none;
+  font-size: 20px; /* Aumenta o tamanho da fonte */
+  text-align: center;
+}
+.mobile-menu-items li a:hover {
+  background-color: #0077b6; /* Efeito hover para melhorar a usabilidade */
+}
+.mobile-menu-items li:last-child {
+  border-bottom: none; /* Remove a linha do último item */
+}
+
+main {
+  flex: 1; /* Ocupa o espaço restante entre header e footer */
+}
 .section {
   display: none;
   padding: 40px 20px;
@@ -58,9 +140,10 @@ nav a.emergency {
 
 .grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 20px;
+
 }
 
 .grid-item {
@@ -68,11 +151,11 @@ nav a.emergency {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   flex: 1;
-  min-width: 250px;
-  max-width: 300px;
+  max-width: 100%;
   text-align: center;
   padding: 20px;
 }
+
 
 .grid-item img {
   width: 100%;
@@ -111,6 +194,7 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 20px;
+  margin-top: auto;
 }
 
 /* Estilos específicos para o formulário de agendamento */
@@ -120,8 +204,11 @@ form {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 92%;
+  margin: auto;
+  padding: 15px;
+  width: 600px;
+  
 }
 
 form label {
@@ -132,12 +219,13 @@ form label {
 }
 
 form input, form select, form textarea {
-  width: 100%;
+  width: 96%;
   padding: 10px;
   font-size: 16px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
+
 }
 
 form input[type="date"], form input[type="datetime-local"] {
@@ -193,33 +281,136 @@ form .terms input {
   flex: 1;  /* A imagem ocupa 50% da largura */
   max-width: 100%;  /* Garante que a imagem não ultrapasse a largura do container */
   height: auto;
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço, mantendo a proporção */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;  /* Empilha o conteúdo do cabeçalho */
+    align-items: center;      /* Centraliza os itens */
+    text-align: center;
+    padding: 15px;            /* Reduz o padding */
+  }
+
+  header img {
+    height: 70px;  /* Reduz o tamanho da logo */
+  }
+
+  header h1 {
+    font-size: 30px;  /* Ajusta o tamanho do título */
+    margin: 10px 0;  /* Ajusta o espaço do título */
+  }
+
+  nav {
+    flex-direction: column;  /* Empilha os links de navegação */
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav a {
+    font-size: 16px;  /* Ajusta o tamanho da fonte para links */
+  }
+ 
   .grid {
-    flex-direction: column;
+    flex-direction: column;  /* Empilha os itens da grid */
+    gap: 20px;
+    max-width: 94%;
   }
 
   .grid-item {
-    min-width: 100%;
-    margin-bottom: 20px;
+    width: 100%;  /* Garante que cada item ocupe toda a largura disponível */
+    margin-bottom: 20px;  /* Espaçamento entre os itens */
   }
-
-  /* Ajustes para telas menores - empilha o texto sobre a imagem */
   .home-content {
-    flex-direction: column;  /* Empilha o conteúdo */
-    align-items: center;  /* Centraliza o conteúdo */
+    flex-direction: column;  /* Empilha o conteúdo (texto e imagem) */
+    align-items: center;      /* Centraliza o conteúdo */
+    gap: 10px;                /* Espaçamento entre o texto e a imagem */
   }
-
+  /*.home-text, .home-image {
+    width: 100%;
+    padding: 0;
+  }*/
   .home-text {
-    padding-right: 0;
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: center;  /* Centraliza o texto */
+    padding-right: 0;     /* Remove o padding */
+    margin-bottom: 20px;  /* Adiciona espaço abaixo do texto */
   }
 
   .home-image {
-    max-width: 80%;  /* Limita a largura da imagem */
-    margin-top: 20px;
+    max-width: 80%;   /* Limita o tamanho da imagem */
+    height: auto;
+    margin-top: 20px;  /* Adiciona um pequeno espaço acima da imagem */
+  }
+
+  .home-text h2 {
+    font-size: 2rem;   /* Ajusta o tamanho do título */
+  }
+
+  .home-text p {
+    font-size: 1.2rem; /* Ajusta o tamanho do texto */
+  }
+  footer {
+    padding: 15px 20px;  /* Ajusta o padding */
+    font-size: 14px;      /* Reduz o tamanho da fonte */
+  }
+  form {
+    padding: 15px;
+    width: 100%;  /* Garante que o formulário ocupe toda a largura disponível */
+    margin: 0 10px;
+
+  }
+
+  form input, form select, form textarea {
+    font-size: 14px;  /* Ajusta o tamanho da fonte */
+  }
+
+  form button {
+    font-size: 16px;  /* Ajusta o tamanho da fonte do botão */
+  }
+  .desktop-menu {
+    display: none; /* Esconde o menu desktop em telas menores */
+  }
+
+  .mobile-menu {
+    display: block; /* Mostra o menu mobile */
   }
 }
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;  /* Ajusta ainda mais o tamanho do título */
+  }
+
+  nav a {
+    font-size: 14px;  /* Ajusta o tamanho dos links */
+  }
+
+  .home-image {
+    max-width: 100%;    /* Aumenta a largura máxima da imagem */
+  }
+
+  form {
+    max-width: 90%;
+    padding: 10px;
+  }
+  .home-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .home-text p {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+  .grid {
+    max-width: 89.5%;
+  }
+}
+
+
+
+
+
