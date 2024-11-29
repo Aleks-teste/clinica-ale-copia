@@ -21,7 +21,7 @@ main h1 {
   text-align: center;
   font-family: 'Roboto', sans-serif; 
   font-weight: 700; /* Negrito */
-  color:#37C9EE; /* Azul escuro */
+  color:#0077b6; /* Azul escuro */
   margin-bottom: 15px;
 }
 
@@ -190,7 +190,7 @@ main {
 }
 
 footer {
-  background-color: #023e8a;
+  background-color: #0077b6;
   color: white;
   text-align: center;
   padding: 10px 20px;
@@ -215,7 +215,7 @@ form label {
   display: block;
   font-size: 16px;
   margin-bottom: 8px;
-  color: #023e8a;
+  color: #0077b6;
 }
 
 form input, form select, form textarea {
@@ -238,7 +238,7 @@ form textarea {
 }
 
 form button {
-  background-color: #023e8a;
+  background-color: #0077b6;
   color: white;
   border: none;
   padding: 12px 20px;
